@@ -1,15 +1,13 @@
 package com.example.notification_service.service.impl;
 
 import com.example.notification_service.model.MessageDTO;
-import com.example.notification_service.service.MessageService;
+import com.example.notification_service.service.EmailService;
 import jakarta.mail.MessagingException;
 import jakarta.mail.internet.MimeMessage;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.mail.MailException;
 import org.springframework.mail.javamail.JavaMailSender;
-import org.springframework.mail.javamail.MimeMailMessage;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.context.Context;
@@ -18,7 +16,7 @@ import org.thymeleaf.spring6.SpringTemplateEngine;
 import java.nio.charset.StandardCharsets;
 
 @Service
-public class MessageServiceImpl implements MessageService {
+public class EmailServiceImpl implements EmailService {
     Logger logger = LoggerFactory.getLogger(this.getClass());
 
     @Autowired
@@ -52,7 +50,7 @@ public class MessageServiceImpl implements MessageService {
 
             logger.info("END... Email sent successfully");
         } catch (MessagingException e) {
-            e.getMessage();
+            logger.error("Email sent with error" + e.getMessage());
         }
     }
 }
