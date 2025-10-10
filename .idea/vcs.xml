@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="VcsDirectoryMappings">
+    <mapping directory="" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tutorials-2024/section6/configservice/src/main/resources/shared" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/tutorials-2024/section8/configservice/src/main/resources/shared" vcs="Git" />
+  </component>
+</project>

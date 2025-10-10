@@ -22,7 +22,7 @@ public class StatisticController {
 
 //    add new
     @PostMapping("/statistic")
-    private StatisticDTO add(@RequestBody StatisticDTO statisticDTO) {
+    public StatisticDTO add(@RequestBody StatisticDTO statisticDTO) {
         logger.debug("Add statistic");
 
         try {

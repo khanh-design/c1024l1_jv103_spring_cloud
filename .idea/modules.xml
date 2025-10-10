@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/account_service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/account_service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/c1024l1_jv103_microservice.iml" filepath="$PROJECT_DIR$/.idea/c1024l1_jv103_microservice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/notification_service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/notification_service.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/statistic_service.main.iml" filepath="$PROJECT_DIR$/.idea/modules/statistic_service.main.iml" />
+    </modules>
+  </component>
+</project>
