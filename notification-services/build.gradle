@@ -34,7 +34,7 @@ dependencies {
     implementation("org.modelmapper:modelmapper:2.4.2")
     implementation 'org.springframework.boot:spring-boot-starter-mail'
     implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
-    // https://mvnrepository.com/artifact/org.springdoc/springdoc-openapi-ui
+    implementation 'me.paulschwarz:spring-dotenv:4.0.0'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     annotationProcessor 'org.projectlombok:lombok'
