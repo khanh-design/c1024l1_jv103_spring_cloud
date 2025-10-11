@@ -25,11 +25,11 @@ public class StatisticController {
     public StatisticDTO add(@RequestBody StatisticDTO statisticDTO) {
         logger.debug("Add statistic");
 
-        // try {
-        //     Thread.sleep(10000);
-        // } catch (InterruptedException e) {
-        //     e.printStackTrace();
-        // }
+        try {
+            Thread.sleep(10000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
 
         statisticService.add(statisticDTO);
         return statisticDTO;
