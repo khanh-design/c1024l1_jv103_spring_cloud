@@ -28,11 +28,12 @@ public class StatisticServiceImpl implements StatisticService {
 
     @Override
     public List<StatisticDTO> getAllStatistics() {
-        List<Statistic> statisticsDTOs = new ArrayList<>();
+        List<StatisticDTO> statisticDTOs = new ArrayList<>();
 
-        statisticRepository.findAll().forEach(statistic -> {
-            statisticsDTOs.add(modelMapper.map(statistic, Statistic.class));
+        statisticRepository.findAll().forEach(statisticDTO -> {
+            statisticDTOs.add(modelMapper.map(statisticDTO, StatisticDTO.class));
         });
-        return List.of();
+
+        return statisticDTOs;
     }
 }

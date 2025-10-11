@@ -1,6 +1,8 @@
 package com.example.accountservices.controller;
 
+import com.example.accountservices.client.StatisticService;
 import com.example.accountservices.model.AccountDTO;
+import com.example.accountservices.model.StatisticDTO;
 import com.example.accountservices.service.AccountService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -17,11 +19,14 @@ public class AccountController {
     @Autowired
     private AccountService accountService;
 
+    @Autowired
+    private StatisticService statisticService;
     // add new
     @PostMapping("/account")
     public AccountDTO addAccount(@RequestBody AccountDTO accountDTO) {
         accountService.add(accountDTO);
 
+        statisticService.add(new StatisticDTO("Account " + accountDTO.getUsername() + "is create", new Date()));
         return accountDTO;
     }
 
