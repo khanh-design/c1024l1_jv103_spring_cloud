@@ -35,12 +35,3 @@ out/
 
 ### VS Code ###
 .vscode/
-.idea
-
-# Ignore environment files
-.env
-.env.*
-
-# Ignore shared configuration with secrets
-config-services/src/main/resources/shared/*.properties
-!config-services/src/main/resources/shared/application.properties
