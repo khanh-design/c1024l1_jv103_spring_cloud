@@ -39,6 +39,8 @@ dependencies {
     implementation 'me.paulschwarz:spring-dotenv:4.0.0'
     implementation 'io.pivotal.spring.cloud:spring-cloud-services-starter-config-client'
     implementation 'org.springframework.cloud:spring-cloud-starter-netflix-eureka-client'
+    implementation 'org.springframework.boot:spring-boot-starter-actuator'
+    implementation 'io.micrometer:micrometer-tracing-bridge-brave'
     compileOnly 'org.projectlombok:lombok'
     developmentOnly 'org.springframework.boot:spring-boot-devtools'
     runtimeOnly 'com.mysql:mysql-connector-j'

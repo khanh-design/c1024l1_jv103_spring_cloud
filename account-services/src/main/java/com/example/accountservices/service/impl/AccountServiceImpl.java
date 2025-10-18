@@ -7,6 +7,7 @@ import com.example.accountservices.service.AccountService;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Async;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
@@ -60,6 +61,7 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
+    @Async
     public List<AccountDTO> getAll() {
         List<AccountDTO> accountDTOs = new ArrayList<>();
 
