@@ -13,7 +13,6 @@ import org.springframework.scheduling.annotation.EnableAsync;
 @SpringBootApplication
 @EnableFeignClients
 @EnableDiscoveryClient
-@EnableAsync
 public class AccountServicesApplication {
 
     public static void main(String[] args) {

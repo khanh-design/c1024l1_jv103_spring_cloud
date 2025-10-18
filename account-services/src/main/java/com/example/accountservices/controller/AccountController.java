@@ -52,7 +52,6 @@ public class AccountController {
     // get all
     @GetMapping("/accounts")
     public List<AccountDTO> getAll() {
-        logger.info("Get all accountservice");
         statisticService.add(new StatisticDTO("Get all accounts", new Date()));
         return accountService.getAll();
     }

@@ -61,7 +61,6 @@ public class AccountServiceImpl implements AccountService {
     }
 
     @Override
-    @Async
     public List<AccountDTO> getAll() {
         List<AccountDTO> accountDTOs = new ArrayList<>();
 
