@@ -4,6 +4,7 @@ import java.security.KeyPair;
 import java.security.KeyPairGenerator;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
+import java.time.Duration;
 import java.util.UUID;
 
 import com.nimbusds.jose.jwk.JWKSet;
@@ -24,6 +25,7 @@ import org.springframework.security.oauth2.server.authorization.client.Registere
 import org.springframework.security.oauth2.server.authorization.config.annotation.web.configuration.OAuth2AuthorizationServerConfiguration;
 import org.springframework.security.oauth2.server.authorization.config.annotation.web.configurers.OAuth2AuthorizationServerConfigurer;
 import org.springframework.security.oauth2.server.authorization.settings.AuthorizationServerSettings;
+import org.springframework.security.oauth2.server.authorization.settings.TokenSettings;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
@@ -45,6 +47,15 @@ public class Oauth2AuthorizationConfig {
 
     @Bean
     public RegisteredClientRepository registeredClientRepository() {
+        TokenSettings tokenSettings = TokenSettings.builder()
+                // Access Token sống 1 giờ
+                .accessTokenTimeToLive(Duration.ofMinutes(10))
+                // Refresh Token sống 7 ngày
+                .refreshTokenTimeToLive(Duration.ofMinutes(10))
+                // Cho phép cấp mới Refresh Token
+                .reuseRefreshTokens(true)
+                .build();
+
         RegisteredClient registeredClient = RegisteredClient.withId(UUID.randomUUID().toString())
                 .clientId("jmaster")
                 .clientSecret(passwordEncoder.encode("123"))
@@ -55,6 +66,7 @@ public class Oauth2AuthorizationConfig {
                 .redirectUri("https://oauthdebugger.com/debug")
                 .scope("read")
                 .scope("write")
+                .tokenSettings(tokenSettings)
                 .build();
 
         return new InMemoryRegisteredClientRepository(registeredClient);
@@ -107,4 +119,5 @@ public class Oauth2AuthorizationConfig {
     public AuthorizationServerSettings authorizationServerSettings() {
         return AuthorizationServerSettings.builder().build();
     }
+
 }
