@@ -1,167 +1,73 @@
-2025-10-30T20:52:34.890+07:00  INFO 9864 --- [discovery-services] [restartedMain] c.e.d.DiscoveryServicesApplication       : Starting DiscoveryServicesApplication using Java 17.0.16 with PID 9864 (D:\c1024l1_jv103_spring_cloud\discovery-services\build\classes\java\main started by Admin in D:\c1024l1_jv103_spring_cloud\discovery-services)
-2025-10-30T20:52:34.920+07:00  INFO 9864 --- [discovery-services] [restartedMain] c.e.d.DiscoveryServicesApplication       : No active profile set, falling back to 1 default profile: "default"
-2025-10-30T20:52:35.388+07:00  INFO 9864 --- [discovery-services] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2025-10-30T20:52:35.389+07:00  INFO 9864 --- [discovery-services] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=discovery-services, profiles=[default], label=null, version=null, state=null
-2025-10-30T20:52:35.440+07:00  INFO 9864 --- [discovery-services] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-10-30T20:52:35.440+07:00  INFO 9864 --- [discovery-services] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-10-30T20:52:50.251+07:00  INFO 9864 --- [discovery-services] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=12afc1dd-30d1-3381-9f47-ae161a920932
-2025-10-30T20:52:53.819+07:00  INFO 9864 --- [discovery-services] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9999 (http)
-2025-10-30T20:52:53.907+07:00  INFO 9864 --- [discovery-services] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-30T20:52:53.908+07:00  INFO 9864 --- [discovery-services] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
-2025-10-30T20:52:54.235+07:00  INFO 9864 --- [discovery-services] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-30T20:52:54.237+07:00  INFO 9864 --- [discovery-services] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 18787 ms
-2025-10-30T20:53:03.705+07:00  INFO 9864 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2025-10-30T20:53:03.722+07:00  INFO 9864 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2025-10-30T20:53:04.811+07:00  INFO 9864 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2025-10-30T20:53:04.812+07:00  INFO 9864 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2025-10-30T20:53:05.873+07:00  INFO 9864 --- [discovery-services] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-10-30T20:53:15.787+07:00  WARN 9864 --- [discovery-services] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2025-10-30T20:53:17.572+07:00  WARN 9864 --- [discovery-services] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-10-30T20:53:17.711+07:00  INFO 9864 --- [discovery-services] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-10-30T20:53:17.882+07:00  INFO 9864 --- [discovery-services] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-10-30T20:53:17.884+07:00  INFO 9864 --- [discovery-services] [restartedMain] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
-2025-10-30T20:53:17.889+07:00  INFO 9864 --- [discovery-services] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1761832397888 with initial instances count: 0
-2025-10-30T20:53:18.274+07:00  INFO 9864 --- [discovery-services] [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
-2025-10-30T20:53:18.283+07:00  INFO 9864 --- [discovery-services] [restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:9999/eureka/]
-2025-10-30T20:53:20.779+07:00  INFO 9864 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2025-10-30T20:53:20.783+07:00  INFO 9864 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2025-10-30T20:53:20.787+07:00  INFO 9864 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2025-10-30T20:53:20.788+07:00  INFO 9864 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2025-10-30T20:53:20.956+07:00  INFO 9864 --- [discovery-services] [restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:9999/eureka/
-2025-10-30T20:53:21.115+07:00  INFO 9864 --- [discovery-services] [restartedMain] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
-2025-10-30T20:53:21.118+07:00  INFO 9864 --- [discovery-services] [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initialized
-2025-10-30T20:53:21.242+07:00  INFO 9864 --- [discovery-services] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
-2025-10-30T20:53:22.356+07:00  INFO 9864 --- [discovery-services] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DISCOVERY-SERVICES with eureka with status UP
-2025-10-30T20:53:22.740+07:00  INFO 9864 --- [discovery-services] [Thread-13] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
-2025-10-30T20:53:22.742+07:00  INFO 9864 --- [discovery-services] [Thread-13] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
-2025-10-30T20:53:22.745+07:00  INFO 9864 --- [discovery-services] [Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
-2025-10-30T20:53:22.747+07:00  INFO 9864 --- [discovery-services] [Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
-2025-10-30T20:53:22.751+07:00  INFO 9864 --- [discovery-services] [Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
-2025-10-30T20:53:22.812+07:00  INFO 9864 --- [discovery-services] [Thread-13] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
-2025-10-30T20:53:22.893+07:00  INFO 9864 --- [discovery-services] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9999 (http) with context path '/'
-2025-10-30T20:53:22.901+07:00  INFO 9864 --- [discovery-services] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9999
-2025-10-30T20:53:25.123+07:00  INFO 9864 --- [discovery-services] [restartedMain] c.e.d.DiscoveryServicesApplication       : Started DiscoveryServicesApplication in 65.738 seconds (process running for 74.463)
-2025-10-30T20:55:08.055+07:00  INFO 21940 --- [discovery-services] [restartedMain] c.e.d.DiscoveryServicesApplication       : Starting DiscoveryServicesApplication using Java 17.0.16 with PID 21940 (D:\c1024l1_jv103_spring_cloud\discovery-services\build\classes\java\main started by Admin in D:\c1024l1_jv103_spring_cloud\discovery-services)
-2025-10-30T20:55:08.063+07:00  INFO 21940 --- [discovery-services] [restartedMain] c.e.d.DiscoveryServicesApplication       : No active profile set, falling back to 1 default profile: "default"
-2025-10-30T20:55:08.250+07:00  INFO 21940 --- [discovery-services] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
-2025-10-30T20:55:08.251+07:00  INFO 21940 --- [discovery-services] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=discovery-services, profiles=[default], label=null, version=null, state=null
-2025-10-30T20:55:08.256+07:00  INFO 21940 --- [discovery-services] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2025-10-30T20:55:08.256+07:00  INFO 21940 --- [discovery-services] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2025-10-30T20:55:12.294+07:00  INFO 21940 --- [discovery-services] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=12afc1dd-30d1-3381-9f47-ae161a920932
-2025-10-30T20:55:14.308+07:00  INFO 21940 --- [discovery-services] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9999 (http)
-2025-10-30T20:55:14.396+07:00  INFO 21940 --- [discovery-services] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2025-10-30T20:55:14.398+07:00  INFO 21940 --- [discovery-services] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
-2025-10-30T20:55:14.811+07:00  INFO 21940 --- [discovery-services] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
-2025-10-30T20:55:14.814+07:00  INFO 21940 --- [discovery-services] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 6557 ms
-2025-10-30T20:55:17.604+07:00  INFO 21940 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2025-10-30T20:55:17.610+07:00  INFO 21940 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2025-10-30T20:55:18.171+07:00  INFO 21940 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2025-10-30T20:55:18.174+07:00  INFO 21940 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2025-10-30T20:55:18.735+07:00  INFO 21940 --- [discovery-services] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
-2025-10-30T20:55:21.433+07:00  WARN 21940 --- [discovery-services] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
-2025-10-30T20:55:21.845+07:00  WARN 21940 --- [discovery-services] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
-2025-10-30T20:55:21.910+07:00  INFO 21940 --- [discovery-services] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
-2025-10-30T20:55:21.999+07:00  INFO 21940 --- [discovery-services] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
-2025-10-30T20:55:22.000+07:00  INFO 21940 --- [discovery-services] [restartedMain] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
-2025-10-30T20:55:22.005+07:00  INFO 21940 --- [discovery-services] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1761832522003 with initial instances count: 0
-2025-10-30T20:55:22.184+07:00  INFO 21940 --- [discovery-services] [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
-2025-10-30T20:55:22.188+07:00  INFO 21940 --- [discovery-services] [restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:9999/eureka/]
-2025-10-30T20:55:22.560+07:00  INFO 21940 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
-2025-10-30T20:55:22.562+07:00  INFO 21940 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
-2025-10-30T20:55:22.562+07:00  INFO 21940 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
-2025-10-30T20:55:22.562+07:00  INFO 21940 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
-2025-10-30T20:55:22.679+07:00  INFO 21940 --- [discovery-services] [restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:9999/eureka/
-2025-10-30T20:55:22.714+07:00  INFO 21940 --- [discovery-services] [restartedMain] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
-2025-10-30T20:55:22.714+07:00  INFO 21940 --- [discovery-services] [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initialized
-2025-10-30T20:55:22.773+07:00  INFO 21940 --- [discovery-services] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
-2025-10-30T20:55:22.964+07:00  INFO 21940 --- [discovery-services] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DISCOVERY-SERVICES with eureka with status UP
-2025-10-30T20:55:23.029+07:00  INFO 21940 --- [discovery-services] [Thread-13] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
-2025-10-30T20:55:23.030+07:00  INFO 21940 --- [discovery-services] [Thread-13] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
-2025-10-30T20:55:23.032+07:00  INFO 21940 --- [discovery-services] [Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
-2025-10-30T20:55:23.033+07:00  INFO 21940 --- [discovery-services] [Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
-2025-10-30T20:55:23.033+07:00  INFO 21940 --- [discovery-services] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9999 (http) with context path '/'
-2025-10-30T20:55:23.034+07:00  INFO 21940 --- [discovery-services] [Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
-2025-10-30T20:55:23.035+07:00  INFO 21940 --- [discovery-services] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9999
-2025-10-30T20:55:23.043+07:00  INFO 21940 --- [discovery-services] [Thread-13] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
-2025-10-30T20:55:23.450+07:00  INFO 21940 --- [discovery-services] [restartedMain] c.e.d.DiscoveryServicesApplication       : Started DiscoveryServicesApplication in 20.568 seconds (process running for 23.352)
-2025-10-30T20:56:23.036+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2025-10-30T20:57:23.036+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2025-10-30T20:58:23.041+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
-2025-10-30T20:58:40.795+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2025-10-30T20:58:40.798+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2025-10-30T20:58:40.806+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 5 ms
-2025-10-30T20:59:23.045+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
-2025-10-30T21:00:23.061+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 15ms
-2025-10-30T21:01:23.067+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
-2025-10-30T21:02:23.078+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
-2025-10-30T21:03:23.089+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
-2025-10-30T21:04:23.097+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
-2025-10-30T21:05:23.106+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
-2025-10-30T21:06:23.110+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
-2025-10-30T21:07:23.117+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
-2025-10-30T21:08:23.126+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
-2025-10-30T21:09:23.129+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
-2025-10-30T21:10:22.714+07:00  INFO 21940 --- [discovery-services] [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 1
-2025-10-30T21:10:23.135+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
-2025-10-30T21:11:23.136+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2025-10-30T21:12:23.139+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
-2025-10-30T21:13:23.139+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2025-10-30T21:14:23.139+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2025-10-30T21:15:23.140+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2025-10-30T21:16:23.148+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
-2025-10-30T21:17:23.148+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2025-10-30T21:18:23.153+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
-2025-10-30T21:19:23.155+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
-2025-10-30T21:20:23.165+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
-2025-10-30T21:20:42.309+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH-SERVICES/Khanh:auth-services:9000 with status UP (replication=false)
-2025-10-30T21:20:43.220+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH-SERVICES/Khanh:auth-services:9000 with status UP (replication=true)
-2025-10-30T21:21:23.169+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
-2025-10-30T21:22:23.174+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
-2025-10-30T21:23:23.178+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 3ms
-2025-10-30T21:24:23.186+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
-2025-10-30T21:25:22.725+07:00  INFO 21940 --- [discovery-services] [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 3
-2025-10-30T21:25:23.193+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
-2025-10-30T21:26:23.208+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
-2025-10-30T21:27:23.210+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
-2025-10-30T21:28:23.221+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
-2025-10-30T21:29:23.222+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2025-10-30T21:30:23.226+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 4ms
-2025-10-30T21:31:23.227+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2025-10-30T21:32:23.239+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
-2025-10-30T21:33:23.249+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
-2025-10-30T21:33:27.090+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH-SERVICES/Khanh:auth-services:9000 with status DOWN (replication=false)
-2025-10-30T21:33:27.603+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH-SERVICES/Khanh:auth-services:9000 with status DOWN (replication=true)
-2025-10-30T21:33:30.178+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-8] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance AUTH-SERVICES/Khanh:auth-services:9000 (replication=false)
-2025-10-30T21:33:30.703+07:00  WARN 21940 --- [discovery-services] [http-nio-9999-exec-2] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: AUTH-SERVICES/Khanh:auth-services:9000
-2025-10-30T21:33:30.704+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-2] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): AUTH-SERVICES - Khanh:auth-services:9000
-2025-10-30T21:33:30.706+07:00  WARN 21940 --- [discovery-services] [TaskBatchingWorker-target_localhost-10] c.n.eureka.cluster.ReplicationTask       : The replication of task AUTH-SERVICES/Khanh:auth-services:9000:Cancel@localhost failed with response code 404
-2025-10-30T21:33:30.706+07:00  WARN 21940 --- [discovery-services] [TaskBatchingWorker-target_localhost-10] c.netflix.eureka.cluster.PeerEurekaNode  : AUTH-SERVICES/Khanh:auth-services:9000:Cancel@localhost: missing entry.
-2025-10-30T21:33:33.990+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH-SERVICES/Khanh:auth-services:9000 with status UP (replication=false)
-2025-10-30T21:33:34.521+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-10] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH-SERVICES/Khanh:auth-services:9000 with status UP (replication=true)
-2025-10-30T21:33:35.214+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH-SERVICES/Khanh:auth-services:9000 with status DOWN (replication=false)
-2025-10-30T21:33:35.725+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-7] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH-SERVICES/Khanh:auth-services:9000 with status DOWN (replication=true)
-2025-10-30T21:33:38.314+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-1] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance AUTH-SERVICES/Khanh:auth-services:9000 (replication=false)
-2025-10-30T21:33:38.846+07:00  WARN 21940 --- [discovery-services] [http-nio-9999-exec-5] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: AUTH-SERVICES/Khanh:auth-services:9000
-2025-10-30T21:33:38.846+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-5] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): AUTH-SERVICES - Khanh:auth-services:9000
-2025-10-30T21:33:38.849+07:00  WARN 21940 --- [discovery-services] [TaskBatchingWorker-target_localhost-12] c.n.eureka.cluster.ReplicationTask       : The replication of task AUTH-SERVICES/Khanh:auth-services:9000:Cancel@localhost failed with response code 404
-2025-10-30T21:33:38.849+07:00  WARN 21940 --- [discovery-services] [TaskBatchingWorker-target_localhost-12] c.netflix.eureka.cluster.PeerEurekaNode  : AUTH-SERVICES/Khanh:auth-services:9000:Cancel@localhost: missing entry.
-2025-10-30T21:33:42.440+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH-SERVICES/Khanh:auth-services:9000 with status UP (replication=false)
-2025-10-30T21:33:42.972+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-9] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH-SERVICES/Khanh:auth-services:9000 with status UP (replication=true)
-2025-10-30T21:34:23.261+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 12ms
-2025-10-30T21:35:23.263+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
-2025-10-30T21:36:23.270+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 6ms
-2025-10-30T21:36:38.664+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-4] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH-SERVICES/Khanh:auth-services:9000 with status DOWN (replication=false)
-2025-10-30T21:36:39.197+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH-SERVICES/Khanh:auth-services:9000 with status DOWN (replication=true)
-2025-10-30T21:36:41.736+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance AUTH-SERVICES/Khanh:auth-services:9000 (replication=false)
-2025-10-30T21:36:42.272+07:00  WARN 21940 --- [discovery-services] [http-nio-9999-exec-9] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: AUTH-SERVICES/Khanh:auth-services:9000
-2025-10-30T21:36:42.272+07:00  INFO 21940 --- [discovery-services] [http-nio-9999-exec-9] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): AUTH-SERVICES - Khanh:auth-services:9000
-2025-10-30T21:36:42.277+07:00  WARN 21940 --- [discovery-services] [TaskBatchingWorker-target_localhost-19] c.n.eureka.cluster.ReplicationTask       : The replication of task AUTH-SERVICES/Khanh:auth-services:9000:Cancel@localhost failed with response code 404
-2025-10-30T21:36:42.279+07:00  WARN 21940 --- [discovery-services] [TaskBatchingWorker-target_localhost-19] c.netflix.eureka.cluster.PeerEurekaNode  : AUTH-SERVICES/Khanh:auth-services:9000:Cancel@localhost: missing entry.
-2025-10-30T21:37:23.278+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 7ms
-2025-10-30T21:38:23.288+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 10ms
-2025-10-30T21:39:23.296+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
-2025-10-30T21:40:22.728+07:00  INFO 21940 --- [discovery-services] [ReplicaAwareInstanceRegistry - RenewalThresholdUpdater] c.n.e.r.PeerAwareInstanceRegistryImpl    : Current renewal threshold is : 1
-2025-10-30T21:40:23.306+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
-2025-10-30T21:41:23.307+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
-2025-10-30T21:42:23.316+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 9ms
-2025-10-30T21:43:23.322+07:00  INFO 21940 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2025-11-01T20:06:52.507+07:00  INFO 15960 --- [discovery-services] [restartedMain] c.e.d.DiscoveryServicesApplication       : Starting DiscoveryServicesApplication using Java 17.0.16 with PID 15960 (D:\c1024l1_jv103_spring_cloud\discovery-services\build\classes\java\main started by Admin in D:\c1024l1_jv103_spring_cloud\discovery-services)
+2025-11-01T20:06:52.511+07:00  INFO 15960 --- [discovery-services] [restartedMain] c.e.d.DiscoveryServicesApplication       : No active profile set, falling back to 1 default profile: "default"
+2025-11-01T20:06:52.563+07:00  INFO 15960 --- [discovery-services] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Fetching config from server at : http://localhost:8888
+2025-11-01T20:06:52.563+07:00  INFO 15960 --- [discovery-services] [restartedMain] o.s.c.c.c.ConfigServerConfigDataLoader   : Located environment: name=discovery-services, profiles=[default], label=null, version=null, state=null
+2025-11-01T20:06:52.565+07:00  INFO 15960 --- [discovery-services] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2025-11-01T20:06:52.565+07:00  INFO 15960 --- [discovery-services] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2025-11-01T20:06:53.851+07:00  INFO 15960 --- [discovery-services] [restartedMain] o.s.cloud.context.scope.GenericScope     : BeanFactory id=9fdc3a97-4dbe-3720-9c98-ebf6f02922c8
+2025-11-01T20:06:54.226+07:00  INFO 15960 --- [discovery-services] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port 9999 (http)
+2025-11-01T20:06:54.240+07:00  INFO 15960 --- [discovery-services] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2025-11-01T20:06:54.240+07:00  INFO 15960 --- [discovery-services] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.46]
+2025-11-01T20:06:54.313+07:00  INFO 15960 --- [discovery-services] [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2025-11-01T20:06:54.314+07:00  INFO 15960 --- [discovery-services] [restartedMain] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1747 ms
+2025-11-01T20:06:55.448+07:00  INFO 15960 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-11-01T20:06:55.450+07:00  INFO 15960 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-11-01T20:06:55.680+07:00  INFO 15960 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-11-01T20:06:55.680+07:00  INFO 15960 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-11-01T20:06:55.843+07:00  INFO 15960 --- [discovery-services] [restartedMain] o.s.v.b.OptionalValidatorFactoryBean     : Failed to set up a Bean Validation provider: jakarta.validation.NoProviderFoundException: Unable to create a Configuration, because no Jakarta Bean Validation provider could be found. Add a provider like Hibernate Validator (RI) to your classpath.
+2025-11-01T20:06:56.808+07:00  WARN 15960 --- [discovery-services] [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : Unable to start LiveReload server
+2025-11-01T20:06:56.949+07:00  WARN 15960 --- [discovery-services] [restartedMain] iguration$LoadBalancerCaffeineWarnLogger : Spring Cloud LoadBalancer is currently working with the default cache. While this cache implementation is useful for development and tests, it's recommended to use Caffeine cache in production.You can switch to using Caffeine cache, by adding it and org.springframework.cache.caffeine.CaffeineCacheManager to the classpath.
+2025-11-01T20:06:56.970+07:00  INFO 15960 --- [discovery-services] [restartedMain] o.s.c.n.eureka.InstanceInfoFactory       : Setting initial instance status as: STARTING
+2025-11-01T20:06:57.007+07:00  INFO 15960 --- [discovery-services] [restartedMain] com.netflix.discovery.DiscoveryClient    : Initializing Eureka in region us-east-1
+2025-11-01T20:06:57.007+07:00  INFO 15960 --- [discovery-services] [restartedMain] com.netflix.discovery.DiscoveryClient    : Client configured to neither register nor query for data.
+2025-11-01T20:06:57.010+07:00  INFO 15960 --- [discovery-services] [restartedMain] com.netflix.discovery.DiscoveryClient    : Discovery Client initialized at timestamp 1762002417009 with initial instances count: 0
+2025-11-01T20:06:57.084+07:00  INFO 15960 --- [discovery-services] [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initializing ...
+2025-11-01T20:06:57.087+07:00  INFO 15960 --- [discovery-services] [restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : Adding new peer nodes [http://localhost:9999/eureka/]
+2025-11-01T20:06:57.323+07:00  INFO 15960 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON encoding codec LegacyJacksonJson
+2025-11-01T20:06:57.323+07:00  INFO 15960 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using JSON decoding codec LegacyJacksonJson
+2025-11-01T20:06:57.324+07:00  INFO 15960 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML encoding codec XStreamXml
+2025-11-01T20:06:57.324+07:00  INFO 15960 --- [discovery-services] [restartedMain] c.n.d.provider.DiscoveryJerseyProvider   : Using XML decoding codec XStreamXml
+2025-11-01T20:06:57.359+07:00  INFO 15960 --- [discovery-services] [restartedMain] c.n.eureka.cluster.PeerEurekaNodes       : Replica node URL:  http://localhost:9999/eureka/
+2025-11-01T20:06:57.370+07:00  INFO 15960 --- [discovery-services] [restartedMain] c.n.e.registry.AbstractInstanceRegistry  : Finished initializing remote region registries. All known remote regions: []
+2025-11-01T20:06:57.370+07:00  INFO 15960 --- [discovery-services] [restartedMain] c.n.eureka.DefaultEurekaServerContext    : Initialized
+2025-11-01T20:06:57.377+07:00  INFO 15960 --- [discovery-services] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 17 endpoints beneath base path '/actuator'
+2025-11-01T20:06:57.453+07:00  INFO 15960 --- [discovery-services] [restartedMain] o.s.c.n.e.s.EurekaServiceRegistry        : Registering application DISCOVERY-SERVICES with eureka with status UP
+2025-11-01T20:06:57.469+07:00  INFO 15960 --- [discovery-services] [Thread-13] o.s.c.n.e.server.EurekaServerBootstrap   : isAws returned false
+2025-11-01T20:06:57.470+07:00  INFO 15960 --- [discovery-services] [Thread-13] o.s.c.n.e.server.EurekaServerBootstrap   : Initialized server context
+2025-11-01T20:06:57.470+07:00  INFO 15960 --- [discovery-services] [Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Got 1 instances from neighboring DS node
+2025-11-01T20:06:57.470+07:00  INFO 15960 --- [discovery-services] [Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Renew threshold is: 1
+2025-11-01T20:06:57.470+07:00  INFO 15960 --- [discovery-services] [Thread-13] c.n.e.r.PeerAwareInstanceRegistryImpl    : Changing status to UP
+2025-11-01T20:06:57.473+07:00  INFO 15960 --- [discovery-services] [Thread-13] e.s.EurekaServerInitializerConfiguration : Started Eureka Server
+2025-11-01T20:06:57.477+07:00  INFO 15960 --- [discovery-services] [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port 9999 (http) with context path '/'
+2025-11-01T20:06:57.478+07:00  INFO 15960 --- [discovery-services] [restartedMain] .s.c.n.e.s.EurekaAutoServiceRegistration : Updating port to 9999
+2025-11-01T20:06:57.604+07:00  INFO 15960 --- [discovery-services] [restartedMain] c.e.d.DiscoveryServicesApplication       : Started DiscoveryServicesApplication in 6.657 seconds (process running for 7.814)
+2025-11-01T20:06:58.334+07:00  INFO 15960 --- [discovery-services] [RMI TCP Connection(2)-26.82.69.187] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2025-11-01T20:06:58.334+07:00  INFO 15960 --- [discovery-services] [RMI TCP Connection(2)-26.82.69.187] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
+2025-11-01T20:06:58.338+07:00  INFO 15960 --- [discovery-services] [RMI TCP Connection(2)-26.82.69.187] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2025-11-01T20:07:57.489+07:00  INFO 15960 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-11-01T20:08:03.481+07:00  INFO 15960 --- [discovery-services] [http-nio-9999-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH-SERVICES/Khanh:auth-services:9000 with status UP (replication=false)
+2025-11-01T20:08:04.547+07:00  INFO 15960 --- [discovery-services] [http-nio-9999-exec-3] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH-SERVICES/Khanh:auth-services:9000 with status UP (replication=true)
+2025-11-01T20:08:57.503+07:00  INFO 15960 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 14ms
+2025-11-01T20:09:57.504+07:00  INFO 15960 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 0ms
+2025-11-01T20:10:57.509+07:00  INFO 15960 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 5ms
+2025-11-01T20:11:57.511+07:00  INFO 15960 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 1ms
+2025-11-01T20:12:57.514+07:00  INFO 15960 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 2ms
+2025-11-01T20:13:57.522+07:00  INFO 15960 --- [discovery-services] [Eureka-EvictionTimer] c.n.e.registry.AbstractInstanceRegistry  : Running the evict task with compensationTime 8ms
+2025-11-01T20:14:49.921+07:00  INFO 15960 --- [discovery-services] [http-nio-9999-exec-2] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH-SERVICES/Khanh:auth-services:9000 with status DOWN (replication=false)
+2025-11-01T20:14:50.449+07:00  INFO 15960 --- [discovery-services] [http-nio-9999-exec-6] c.n.e.registry.AbstractInstanceRegistry  : Registered instance AUTH-SERVICES/Khanh:auth-services:9000 with status DOWN (replication=true)
+2025-11-01T20:14:53.008+07:00  INFO 15960 --- [discovery-services] [http-nio-9999-exec-5] c.n.e.registry.AbstractInstanceRegistry  : Cancelled instance AUTH-SERVICES/Khanh:auth-services:9000 (replication=false)
+2025-11-01T20:14:53.535+07:00  WARN 15960 --- [discovery-services] [http-nio-9999-exec-9] c.n.e.registry.AbstractInstanceRegistry  : DS: Registry: cancel failed because Lease is not registered for: AUTH-SERVICES/Khanh:auth-services:9000
+2025-11-01T20:14:53.536+07:00  INFO 15960 --- [discovery-services] [http-nio-9999-exec-9] c.n.eureka.resources.InstanceResource    : Not Found (Cancel): AUTH-SERVICES - Khanh:auth-services:9000
+2025-11-01T20:14:53.541+07:00  WARN 15960 --- [discovery-services] [TaskBatchingWorker-target_localhost-14] c.n.eureka.cluster.ReplicationTask       : The replication of task AUTH-SERVICES/Khanh:auth-services:9000:Cancel@localhost failed with response code 404
+2025-11-01T20:14:53.541+07:00  WARN 15960 --- [discovery-services] [TaskBatchingWorker-target_localhost-14] c.netflix.eureka.cluster.PeerEurekaNode  : AUTH-SERVICES/Khanh:auth-services:9000:Cancel@localhost: missing entry.
+2025-11-01T20:14:55.288+07:00  INFO 15960 --- [discovery-services] [SpringApplicationShutdownHook] o.s.c.n.e.s.EurekaServiceRegistry        : Unregistering application DISCOVERY-SERVICES with eureka with status DOWN
+2025-11-01T20:14:55.294+07:00  INFO 15960 --- [discovery-services] [SpringApplicationShutdownHook] o.s.b.w.e.tomcat.GracefulShutdown        : Commencing graceful shutdown. Waiting for active requests to complete
+2025-11-01T20:14:55.446+07:00  INFO 15960 --- [discovery-services] [tomcat-shutdown] o.s.b.w.e.tomcat.GracefulShutdown        : Graceful shutdown complete
+2025-11-01T20:14:55.452+07:00  INFO 15960 --- [discovery-services] [SpringApplicationShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Shutting down Eureka Server..
+2025-11-01T20:14:55.452+07:00  INFO 15960 --- [discovery-services] [SpringApplicationShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2025-11-01T20:14:55.462+07:00  INFO 15960 --- [discovery-services] [SpringApplicationShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2025-11-01T20:14:55.462+07:00  INFO 15960 --- [discovery-services] [SpringApplicationShutdownHook] o.s.c.n.e.server.EurekaServerBootstrap   : Eureka Service is now shutdown...
+2025-11-01T20:14:55.463+07:00  INFO 15960 --- [discovery-services] [SpringApplicationShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shutting down ...
+2025-11-01T20:14:55.464+07:00  INFO 15960 --- [discovery-services] [SpringApplicationShutdownHook] c.n.eureka.DefaultEurekaServerContext    : Shut down
+2025-11-01T20:14:55.475+07:00  INFO 15960 --- [discovery-services] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Shutting down DiscoveryClient ...
+2025-11-01T20:14:55.475+07:00  INFO 15960 --- [discovery-services] [SpringApplicationShutdownHook] com.netflix.discovery.DiscoveryClient    : Completed shut down of DiscoveryClient

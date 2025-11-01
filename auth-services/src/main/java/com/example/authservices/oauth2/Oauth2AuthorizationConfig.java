@@ -50,6 +50,8 @@ public class Oauth2AuthorizationConfig {
                 .clientSecret(passwordEncoder.encode("123"))
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
                 .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
+                .authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS)
+                .authorizationGrantType(new AuthorizationGrantType("password"))
                 .redirectUri("https://oauthdebugger.com/debug")
                 .scope("read")
                 .scope("write")
@@ -61,11 +63,21 @@ public class Oauth2AuthorizationConfig {
     @Bean
     @Order(1)
     public SecurityFilterChain authServerSecurityFilterChain(HttpSecurity http) throws Exception {
-        OAuth2AuthorizationServerConfiguration.applyDefaultSecurity(http);
-        http.getConfigurer(OAuth2AuthorizationServerConfigurer.class)
-                .oidc(Customizer.withDefaults());
+        OAuth2AuthorizationServerConfigurer authorizationServerConfigurer = new OAuth2AuthorizationServerConfigurer();
+
+        http
+                .securityMatcher(authorizationServerConfigurer.getEndpointsMatcher())
+                .with(authorizationServerConfigurer, (configurer) -> configurer
+                        .oidc(Customizer.withDefaults())
+                )
+                .authorizeHttpRequests(authorize -> authorize
+                        .anyRequest().authenticated()
+                )
+                .formLogin(Customizer.withDefaults());
+
         return http.build();
     }
+
 
     @Bean
     public JWKSource<SecurityContext> jwkSource() throws Exception {
